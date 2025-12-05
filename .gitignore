@@ -1,0 +1,5 @@
+.vscode
+/unpacked_assets
+/dist
+/node_modules
+/docs

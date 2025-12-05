@@ -1,0 +1,975 @@
+{
+	"frames": {
+		"laserBlue01.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 9,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 54
+			}
+		},
+		"laserBlue02.png": {
+			"frame": {
+				"x": 12,
+				"y": 1,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserBlue03.png": {
+			"frame": {
+				"x": 27,
+				"y": 1,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserBlue04.png": {
+			"frame": {
+				"x": 38,
+				"y": 1,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserBlue05.png": {
+			"frame": {
+				"x": 53,
+				"y": 1,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserBlue06.png": {
+			"frame": {
+				"x": 64,
+				"y": 1,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserBlue07.png": {
+			"frame": {
+				"x": 79,
+				"y": 1,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserBlue08.png": {
+			"frame": {
+				"x": 90,
+				"y": 1,
+				"w": 48,
+				"h": 46
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 46
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 46
+			}
+		},
+		"laserBlue09.png": {
+			"frame": {
+				"x": 140,
+				"y": 1,
+				"w": 48,
+				"h": 46
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 46
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 46
+			}
+		},
+		"laserBlue10.png": {
+			"frame": {
+				"x": 12,
+				"y": 49,
+				"w": 37,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 37,
+				"h": 37
+			}
+		},
+		"laserBlue11.png": {
+			"frame": {
+				"x": 51,
+				"y": 49,
+				"w": 38,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 38,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 38,
+				"h": 37
+			}
+		},
+		"laserBlue12.png": {
+			"frame": {
+				"x": 190,
+				"y": 1,
+				"w": 13,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 57
+			}
+		},
+		"laserBlue13.png": {
+			"frame": {
+				"x": 205,
+				"y": 1,
+				"w": 9,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 57
+			}
+		},
+		"laserBlue14.png": {
+			"frame": {
+				"x": 91,
+				"y": 60,
+				"w": 13,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 57
+			}
+		},
+		"laserBlue15.png": {
+			"frame": {
+				"x": 1,
+				"y": 60,
+				"w": 9,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 57
+			}
+		},
+		"laserBlue16.png": {
+			"frame": {
+				"x": 106,
+				"y": 60,
+				"w": 13,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 54
+			}
+		},
+		"laserGreen01.png": {
+			"frame": {
+				"x": 121,
+				"y": 49,
+				"w": 37,
+				"h": 38
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 38
+			},
+			"sourceSize": {
+				"w": 37,
+				"h": 38
+			}
+		},
+		"laserGreen02.png": {
+			"frame": {
+				"x": 160,
+				"y": 60,
+				"w": 13,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 57
+			}
+		},
+		"laserGreen03.png": {
+			"frame": {
+				"x": 175,
+				"y": 60,
+				"w": 9,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 57
+			}
+		},
+		"laserGreen04.png": {
+			"frame": {
+				"x": 186,
+				"y": 60,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserGreen05.png": {
+			"frame": {
+				"x": 201,
+				"y": 60,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserGreen06.png": {
+			"frame": {
+				"x": 12,
+				"y": 99,
+				"w": 13,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 57
+			}
+		},
+		"laserGreen07.png": {
+			"frame": {
+				"x": 27,
+				"y": 99,
+				"w": 9,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 57
+			}
+		},
+		"laserGreen08.png": {
+			"frame": {
+				"x": 38,
+				"y": 99,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserGreen09.png": {
+			"frame": {
+				"x": 53,
+				"y": 99,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserGreen10.png": {
+			"frame": {
+				"x": 64,
+				"y": 99,
+				"w": 13,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 54
+			}
+		},
+		"laserGreen11.png": {
+			"frame": {
+				"x": 79,
+				"y": 99,
+				"w": 9,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 54
+			}
+		},
+		"laserGreen12.png": {
+			"frame": {
+				"x": 121,
+				"y": 99,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserGreen13.png": {
+			"frame": {
+				"x": 136,
+				"y": 99,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserGreen14.png": {
+			"frame": {
+				"x": 147,
+				"y": 119,
+				"w": 48,
+				"h": 46
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 46
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 46
+			}
+		},
+		"laserGreen15.png": {
+			"frame": {
+				"x": 1,
+				"y": 167,
+				"w": 48,
+				"h": 46
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 46
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 46
+			}
+		},
+		"laserGreen16.png": {
+			"frame": {
+				"x": 51,
+				"y": 167,
+				"w": 37,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 37,
+				"h": 37
+			}
+		},
+		"laserRed01.png": {
+			"frame": {
+				"x": 197,
+				"y": 99,
+				"w": 9,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 54
+			}
+		},
+		"laserRed02.png": {
+			"frame": {
+				"x": 90,
+				"y": 155,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserRed03.png": {
+			"frame": {
+				"x": 105,
+				"y": 155,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserRed04.png": {
+			"frame": {
+				"x": 116,
+				"y": 155,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserRed05.png": {
+			"frame": {
+				"x": 131,
+				"y": 155,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserRed06.png": {
+			"frame": {
+				"x": 197,
+				"y": 155,
+				"w": 13,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 37
+			}
+		},
+		"laserRed07.png": {
+			"frame": {
+				"x": 216,
+				"y": 1,
+				"w": 9,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 37
+			}
+		},
+		"laserRed08.png": {
+			"frame": {
+				"x": 142,
+				"y": 167,
+				"w": 48,
+				"h": 46
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 46
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 46
+			}
+		},
+		"laserRed09.png": {
+			"frame": {
+				"x": 227,
+				"y": 1,
+				"w": 48,
+				"h": 46
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 48,
+				"h": 46
+			},
+			"sourceSize": {
+				"w": 48,
+				"h": 46
+			}
+		},
+		"laserRed10.png": {
+			"frame": {
+				"x": 216,
+				"y": 49,
+				"w": 37,
+				"h": 36
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 36
+			},
+			"sourceSize": {
+				"w": 37,
+				"h": 36
+			}
+		},
+		"laserRed11.png": {
+			"frame": {
+				"x": 212,
+				"y": 87,
+				"w": 37,
+				"h": 37
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 37,
+				"h": 37
+			},
+			"sourceSize": {
+				"w": 37,
+				"h": 37
+			}
+		},
+		"laserRed12.png": {
+			"frame": {
+				"x": 255,
+				"y": 49,
+				"w": 13,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 57
+			}
+		},
+		"laserRed13.png": {
+			"frame": {
+				"x": 251,
+				"y": 108,
+				"w": 9,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 57
+			}
+		},
+		"laserRed14.png": {
+			"frame": {
+				"x": 262,
+				"y": 108,
+				"w": 13,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 57
+			}
+		},
+		"laserRed15.png": {
+			"frame": {
+				"x": 212,
+				"y": 167,
+				"w": 9,
+				"h": 57
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 9,
+				"h": 57
+			},
+			"sourceSize": {
+				"w": 9,
+				"h": 57
+			}
+		},
+		"laserRed16.png": {
+			"frame": {
+				"x": 223,
+				"y": 167,
+				"w": 13,
+				"h": 54
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 13,
+				"h": 54
+			},
+			"sourceSize": {
+				"w": 13,
+				"h": 54
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 276,
+			"h": 225
+		},
+		"scale": "1"
+	}
+}

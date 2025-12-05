@@ -1,0 +1,415 @@
+{
+	"frames": {
+		"meteorBrown_big1.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 101,
+				"h": 84
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 101,
+				"h": 84
+			},
+			"sourceSize": {
+				"w": 101,
+				"h": 84
+			}
+		},
+		"meteorBrown_big2.png": {
+			"frame": {
+				"x": 104,
+				"y": 1,
+				"w": 120,
+				"h": 98
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 120,
+				"h": 98
+			},
+			"sourceSize": {
+				"w": 120,
+				"h": 98
+			}
+		},
+		"meteorBrown_big3.png": {
+			"frame": {
+				"x": 1,
+				"y": 101,
+				"w": 89,
+				"h": 82
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 89,
+				"h": 82
+			},
+			"sourceSize": {
+				"w": 89,
+				"h": 82
+			}
+		},
+		"meteorBrown_big4.png": {
+			"frame": {
+				"x": 92,
+				"y": 101,
+				"w": 98,
+				"h": 96
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 98,
+				"h": 96
+			},
+			"sourceSize": {
+				"w": 98,
+				"h": 96
+			}
+		},
+		"meteorBrown_med1.png": {
+			"frame": {
+				"x": 226,
+				"y": 1,
+				"w": 43,
+				"h": 43
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 43,
+				"h": 43
+			},
+			"sourceSize": {
+				"w": 43,
+				"h": 43
+			}
+		},
+		"meteorBrown_med3.png": {
+			"frame": {
+				"x": 226,
+				"y": 46,
+				"w": 45,
+				"h": 40
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 45,
+				"h": 40
+			},
+			"sourceSize": {
+				"w": 45,
+				"h": 40
+			}
+		},
+		"meteorBrown_small1.png": {
+			"frame": {
+				"x": 271,
+				"y": 1,
+				"w": 28,
+				"h": 28
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 28,
+				"h": 28
+			},
+			"sourceSize": {
+				"w": 28,
+				"h": 28
+			}
+		},
+		"meteorBrown_small2.png": {
+			"frame": {
+				"x": 226,
+				"y": 88,
+				"w": 29,
+				"h": 26
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 29,
+				"h": 26
+			},
+			"sourceSize": {
+				"w": 29,
+				"h": 26
+			}
+		},
+		"meteorBrown_tiny1.png": {
+			"frame": {
+				"x": 273,
+				"y": 31,
+				"w": 18,
+				"h": 18
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 18,
+				"h": 18
+			},
+			"sourceSize": {
+				"w": 18,
+				"h": 18
+			}
+		},
+		"meteorBrown_tiny2.png": {
+			"frame": {
+				"x": 273,
+				"y": 51,
+				"w": 16,
+				"h": 15
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 16,
+				"h": 15
+			},
+			"sourceSize": {
+				"w": 16,
+				"h": 15
+			}
+		},
+		"meteorGrey_big1.png": {
+			"frame": {
+				"x": 192,
+				"y": 116,
+				"w": 101,
+				"h": 84
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 101,
+				"h": 84
+			},
+			"sourceSize": {
+				"w": 101,
+				"h": 84
+			}
+		},
+		"meteorGrey_big2.png": {
+			"frame": {
+				"x": 1,
+				"y": 199,
+				"w": 120,
+				"h": 98
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 120,
+				"h": 98
+			},
+			"sourceSize": {
+				"w": 120,
+				"h": 98
+			}
+		},
+		"meteorGrey_big3.png": {
+			"frame": {
+				"x": 123,
+				"y": 202,
+				"w": 89,
+				"h": 82
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 89,
+				"h": 82
+			},
+			"sourceSize": {
+				"w": 89,
+				"h": 82
+			}
+		},
+		"meteorGrey_big4.png": {
+			"frame": {
+				"x": 301,
+				"y": 1,
+				"w": 98,
+				"h": 96
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 98,
+				"h": 96
+			},
+			"sourceSize": {
+				"w": 98,
+				"h": 96
+			}
+		},
+		"meteorGrey_med1.png": {
+			"frame": {
+				"x": 295,
+				"y": 99,
+				"w": 43,
+				"h": 43
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 43,
+				"h": 43
+			},
+			"sourceSize": {
+				"w": 43,
+				"h": 43
+			}
+		},
+		"meteorGrey_med2.png": {
+			"frame": {
+				"x": 340,
+				"y": 99,
+				"w": 45,
+				"h": 40
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 45,
+				"h": 40
+			},
+			"sourceSize": {
+				"w": 45,
+				"h": 40
+			}
+		},
+		"meteorGrey_small1.png": {
+			"frame": {
+				"x": 340,
+				"y": 141,
+				"w": 28,
+				"h": 28
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 28,
+				"h": 28
+			},
+			"sourceSize": {
+				"w": 28,
+				"h": 28
+			}
+		},
+		"meteorGrey_small2.png": {
+			"frame": {
+				"x": 370,
+				"y": 141,
+				"w": 29,
+				"h": 26
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 29,
+				"h": 26
+			},
+			"sourceSize": {
+				"w": 29,
+				"h": 26
+			}
+		},
+		"meteorGrey_tiny1.png": {
+			"frame": {
+				"x": 295,
+				"y": 169,
+				"w": 18,
+				"h": 18
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 18,
+				"h": 18
+			},
+			"sourceSize": {
+				"w": 18,
+				"h": 18
+			}
+		},
+		"meteorGrey_tiny2.png": {
+			"frame": {
+				"x": 257,
+				"y": 99,
+				"w": 16,
+				"h": 15
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 16,
+				"h": 15
+			},
+			"sourceSize": {
+				"w": 16,
+				"h": 15
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 400,
+			"h": 298
+		},
+		"scale": "1"
+	}
+}

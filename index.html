@@ -1,0 +1,189 @@
+<!--
+Rockbuster.io Starter
+Stack: HTML5 Canvas 2D + Vanilla JS ES Modules (+ optional Howler.js)
+Deployable as static site (Netlify/Vercel/GitHub Pages)
+
+This HTML now includes a MOBILE CONTROLS OVERLAY:
+  - Bottom-left virtual joystick (base + nub)
+  - Bottom-right fire button
+They are always present in the DOM and will be hidden on larger screens via CSS.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Viewport
+       - width=device-width ensures the layout matches the device width.
+       - initial-scale=1 sets 1:1 scale.
+       - user-scalable=no prevents pinch-zoom while playing (optional; improves UX).
+  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <title>Rockbuster.io</title>
+
+  <!-- Global styles.
+       We'll add CSS rules here (in styles.css) to:
+         • Position the joystick + fire button on small screens
+         • Hide them on larger screens (e.g., min-width: 1024px)
+         • Disable browser gestures over the controls (touch-action: none)
+  -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Optional: Howler.js for audio (uncomment to enable) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/howler@2/dist/howler.core.min.js"></script> -->
+</head>
+<body>
+  <!-- Main game canvas (logical size 960x540; CSS size can differ) -->
+  <canvas id="game" width="960" height="540"></canvas>
+
+  <!-- Debug panel (toggle via your own logic) -->
+  <div id="debug" class="hidden"></div>
+
+  <div id="menu-overlay" role="dialog" aria-modal="true" aria-hidden="false">
+    <div class="menu-card">
+      <header class="menu-header">
+        <h1 class="menu-title">Rockbuster.io</h1>
+        <p class="menu-subtitle">Survive wave after wave of drifting asteroids in the Rockbuster belt.</p>
+      </header>
+
+      <nav class="menu-nav" aria-label="Main menu">
+        <button type="button" class="menu-nav-btn is-active" data-menu-view="start">Start Game</button>
+        <button type="button" class="menu-nav-btn" data-menu-view="how">How to Play</button>
+        <button type="button" class="menu-nav-btn" data-menu-view="about">About</button>
+      </nav>
+
+      <section class="menu-section is-active" data-menu-section="start" aria-labelledby="menu-start-heading">
+        <h2 id="menu-start-heading">Start Game</h2>
+        <p class="menu-lead">Pilot the last defense ship and clear as many asteroid waves as you can.</p>
+        <button type="button" class="menu-primary-btn" data-action="start-game">Start Game</button>
+        <p class="menu-footnote">Press Enter or Space to launch immediately.</p>
+      </section>
+
+      <section class="menu-section" data-menu-section="how" aria-labelledby="menu-how-heading">
+        <h2 id="menu-how-heading">How to Play</h2>
+        <div class="menu-controls">
+          <div class="menu-controls-column">
+            <h3>Keyboard</h3>
+            <ul>
+              <li><span class="key">← / →</span> Rotate the ship</li>
+              <li><span class="key">↑</span> Engage thrusters</li>
+              <li><span class="key">Space or J</span> Fire lasers</li>
+            </ul>
+          </div>
+          <div class="menu-controls-column">
+            <h3>Touch</h3>
+            <ul>
+              <li>Drag the left joystick to steer and thrust.</li>
+              <li>Tap the right button to fire.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Power-up Legend</h3>
+        <ul class="powerup-legend">
+          <li>
+            <img src="./assets/sprites/Power-ups/things_silver.png" alt="Triple shot power-up" />
+            <div>
+              <h4>Triple Shot</h4>
+              <p>Fire three lasers at once. Collect again to upgrade to five shots.</p>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/sprites/Power-ups/pill_green.png" alt="Extra life power-up" />
+            <div>
+              <h4>Extra Life</h4>
+              <p>Adds another ship (up to five). Extras become bonus score.</p>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/sprites/Power-ups/shield_silver.png" alt="Shield power-up" />
+            <div>
+              <h4>Shield</h4>
+              <p>Grants an energy barrier that absorbs the next collision.</p>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/sprites/Power-ups/star_gold.png" alt="Speed power-up" />
+            <div>
+              <h4>Speed Boost</h4>
+              <p>Boosts acceleration and top speed. Stacks until the limit.</p>
+            </div>
+          </li>
+        </ul>
+
+        <h3>UFO Encounters</h3>
+        <figure class="ufo-legend">
+          <img src="./assets/sprites/ufoGreen.png" alt="Green UFO enemy ship" />
+          <figcaption>
+            <h4>Scout Saucer</h4>
+            <p>The green-class UFO patrols in from the edge and peppers the arena with pinpoint laser volleys.</p>
+          </figcaption>
+        </figure>
+        <p>A hostile saucer patrols each wave once its spawn timer expires. The HUD shows a countdown before it arrives and "UFO: ACTIVE" while it's on the field.</p>
+        <ul>
+          <li>The first UFO appears about 30 seconds into a run, and the delay shrinks by roughly a second each new wave (down to a six-second minimum).</li>
+          <li>It glides straight across the playfield and fires perfectly accurate lasers. Lasers travel fast but do not wrap, so lateral dodges can outrun them.</li>
+          <li>Three hits from your blasters will destroy the UFO and award a 750 point bounty. Once it explodes, no more saucers spawn until the next wave.</li>
+        </ul>
+      </section>
+
+      <section class="menu-section" data-menu-section="about" aria-labelledby="menu-about-heading">
+        <h2 id="menu-about-heading">About</h2>
+        <p>Rockbuster.io is a modern take on the classic arcade shooter built with HTML5 Canvas and vanilla JavaScript.</p>
+        <p>Code &amp; gameplay: Rockbuster.io team. Sprites by <a href="https://www.kenney.nl" target="_blank" rel="noopener noreferrer">Kenney</a>.</p>
+        <p>Review the controls, learn the power-ups, then dive in and chase the high score!</p>
+      </section>
+    </div>
+  </div>
+
+  <div id="gameover-overlay" role="dialog" aria-modal="true" aria-hidden="true" class="is-hidden">
+    <div class="menu-card gameover-card">
+      <header class="menu-header">
+        <h2 class="menu-title">Game Over</h2>
+        <p class="menu-subtitle">Final Score: <span data-score-value>0</span></p>
+      </header>
+
+      <p class="gameover-summary">Wave Reached: <span data-wave-value>1</span></p>
+      <p class="gameover-summary">High Score: <span data-highscore-value>0</span></p>
+      <p class="gameover-highlight" data-highscore-message hidden>New High Score!</p>
+
+      <div class="gameover-actions">
+        <button type="button" class="menu-primary-btn" data-action="play-again">Play Again</button>
+        <button type="button" class="menu-nav-btn" data-action="return-menu">Return to Start Menu</button>
+      </div>
+
+      <p class="menu-footnote">Press Enter to play again instantly.</p>
+    </div>
+  </div>
+
+  <!-- ===================== MOBILE CONTROLS OVERLAY =====================
+       Structure:
+         #ui-controls       : fixed overlay container (pointer-events: none)
+           #stick           : joystick base (pointer-events: auto)
+             #stick-nub     : draggable nub indicating direction/magnitude
+           #fire-btn        : fire button (pointer-events: auto)
+
+       Notes:
+       - The overlay will be hidden on larger screens with a media query in styles.css.
+       - Accessibility: fire button has an aria-label; joystick is purely visual/touch.
+       - No inline JS here; behavior is added by a small module (e.g., src/ui/VirtualControls.js).
+  --------------------------------------------------------------------- -->
+  <div id="ui-controls" aria-hidden="true">
+    <!-- Virtual joystick (bottom-left on mobile via CSS) -->
+    <div id="stick" role="img" aria-label="Virtual joystick">
+      <div id="stick-nub"></div>
+    </div>
+
+    <!-- Fire button (bottom-right on mobile via CSS) -->
+    <button id="fire-btn" type="button" aria-label="Fire weapon"></button>
+  </div>
+  <!-- =================== END MOBILE CONTROLS OVERLAY =================== -->
+
+  <!-- App entry (ES module). Vite/dev server typically serves from /src/. -->
+  <!-- If you serve from the project root without a bundler, keep the relative path: ./src/main.js -->
+  <!-- <script type="module" src="./src/main.js"></script> -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

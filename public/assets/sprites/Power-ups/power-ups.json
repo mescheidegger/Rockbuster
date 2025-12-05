@@ -1,0 +1,655 @@
+{
+	"frames": {
+		"bold_silver.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 19,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 19,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 19,
+				"h": 30
+			}
+		},
+		"bolt_bronze.png": {
+			"frame": {
+				"x": 22,
+				"y": 1,
+				"w": 19,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 19,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 19,
+				"h": 30
+			}
+		},
+		"bolt_gold.png": {
+			"frame": {
+				"x": 43,
+				"y": 1,
+				"w": 19,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 19,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 19,
+				"h": 30
+			}
+		},
+		"pill_blue.png": {
+			"frame": {
+				"x": 64,
+				"y": 1,
+				"w": 22,
+				"h": 21
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 21
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 21
+			}
+		},
+		"pill_green.png": {
+			"frame": {
+				"x": 88,
+				"y": 1,
+				"w": 22,
+				"h": 21
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 21
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 21
+			}
+		},
+		"pill_red.png": {
+			"frame": {
+				"x": 112,
+				"y": 1,
+				"w": 22,
+				"h": 21
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 21
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 21
+			}
+		},
+		"pill_yellow.png": {
+			"frame": {
+				"x": 136,
+				"y": 1,
+				"w": 22,
+				"h": 21
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 22,
+				"h": 21
+			},
+			"sourceSize": {
+				"w": 22,
+				"h": 21
+			}
+		},
+		"powerupBlue.png": {
+			"frame": {
+				"x": 64,
+				"y": 24,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupBlue_bolt.png": {
+			"frame": {
+				"x": 100,
+				"y": 24,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupBlue_shield.png": {
+			"frame": {
+				"x": 136,
+				"y": 24,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupBlue_star.png": {
+			"frame": {
+				"x": 1,
+				"y": 59,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupGreen.png": {
+			"frame": {
+				"x": 37,
+				"y": 59,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupGreen_bolt.png": {
+			"frame": {
+				"x": 73,
+				"y": 59,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupGreen_shield.png": {
+			"frame": {
+				"x": 109,
+				"y": 59,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupGreen_star.png": {
+			"frame": {
+				"x": 145,
+				"y": 59,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupRed.png": {
+			"frame": {
+				"x": 1,
+				"y": 94,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupRed_bolt.png": {
+			"frame": {
+				"x": 37,
+				"y": 94,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupRed_shield.png": {
+			"frame": {
+				"x": 73,
+				"y": 94,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupRed_star.png": {
+			"frame": {
+				"x": 109,
+				"y": 94,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupYellow.png": {
+			"frame": {
+				"x": 145,
+				"y": 94,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupYellow_bolt.png": {
+			"frame": {
+				"x": 1,
+				"y": 129,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupYellow_shield.png": {
+			"frame": {
+				"x": 37,
+				"y": 129,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"powerupYellow_star.png": {
+			"frame": {
+				"x": 73,
+				"y": 129,
+				"w": 34,
+				"h": 33
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 34,
+				"h": 33
+			},
+			"sourceSize": {
+				"w": 34,
+				"h": 33
+			}
+		},
+		"shield_bronze.png": {
+			"frame": {
+				"x": 109,
+				"y": 129,
+				"w": 30,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 30,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 30,
+				"h": 30
+			}
+		},
+		"shield_gold.png": {
+			"frame": {
+				"x": 141,
+				"y": 129,
+				"w": 30,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 30,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 30,
+				"h": 30
+			}
+		},
+		"shield_silver.png": {
+			"frame": {
+				"x": 172,
+				"y": 1,
+				"w": 30,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 30,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 30,
+				"h": 30
+			}
+		},
+		"star_bronze.png": {
+			"frame": {
+				"x": 181,
+				"y": 33,
+				"w": 31,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 31,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 31,
+				"h": 30
+			}
+		},
+		"star_gold.png": {
+			"frame": {
+				"x": 181,
+				"y": 65,
+				"w": 31,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 31,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 31,
+				"h": 30
+			}
+		},
+		"star_silver.png": {
+			"frame": {
+				"x": 181,
+				"y": 97,
+				"w": 31,
+				"h": 30
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 31,
+				"h": 30
+			},
+			"sourceSize": {
+				"w": 31,
+				"h": 30
+			}
+		},
+		"things_bronze.png": {
+			"frame": {
+				"x": 173,
+				"y": 129,
+				"w": 32,
+				"h": 32
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 32
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 32
+			}
+		},
+		"things_gold.png": {
+			"frame": {
+				"x": 109,
+				"y": 163,
+				"w": 32,
+				"h": 32
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 32
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 32
+			}
+		},
+		"things_silver.png": {
+			"frame": {
+				"x": 143,
+				"y": 163,
+				"w": 32,
+				"h": 32
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 32,
+				"h": 32
+			},
+			"sourceSize": {
+				"w": 32,
+				"h": 32
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 213,
+			"h": 196
+		},
+		"scale": "1"
+	}
+}

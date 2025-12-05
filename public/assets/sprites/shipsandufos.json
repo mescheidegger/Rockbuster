@@ -1,0 +1,335 @@
+{
+	"frames": {
+		"playerShip1_blue.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 99,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 99,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 99,
+				"h": 75
+			}
+		},
+		"playerShip1_green.png": {
+			"frame": {
+				"x": 102,
+				"y": 1,
+				"w": 99,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 99,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 99,
+				"h": 75
+			}
+		},
+		"playerShip1_orange.png": {
+			"frame": {
+				"x": 203,
+				"y": 1,
+				"w": 99,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 99,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 99,
+				"h": 75
+			}
+		},
+		"playerShip1_red.png": {
+			"frame": {
+				"x": 1,
+				"y": 78,
+				"w": 99,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 99,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 99,
+				"h": 75
+			}
+		},
+		"playerShip2_blue.png": {
+			"frame": {
+				"x": 102,
+				"y": 78,
+				"w": 112,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 112,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 112,
+				"h": 75
+			}
+		},
+		"playerShip2_green.png": {
+			"frame": {
+				"x": 216,
+				"y": 78,
+				"w": 112,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 112,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 112,
+				"h": 75
+			}
+		},
+		"playerShip2_orange.png": {
+			"frame": {
+				"x": 1,
+				"y": 155,
+				"w": 112,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 112,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 112,
+				"h": 75
+			}
+		},
+		"playerShip2_red.png": {
+			"frame": {
+				"x": 115,
+				"y": 155,
+				"w": 112,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 112,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 112,
+				"h": 75
+			}
+		},
+		"playerShip3_blue.png": {
+			"frame": {
+				"x": 229,
+				"y": 155,
+				"w": 98,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 98,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 98,
+				"h": 75
+			}
+		},
+		"playerShip3_green.png": {
+			"frame": {
+				"x": 1,
+				"y": 232,
+				"w": 98,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 98,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 98,
+				"h": 75
+			}
+		},
+		"playerShip3_orange.png": {
+			"frame": {
+				"x": 101,
+				"y": 232,
+				"w": 98,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 98,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 98,
+				"h": 75
+			}
+		},
+		"playerShip3_red.png": {
+			"frame": {
+				"x": 201,
+				"y": 232,
+				"w": 98,
+				"h": 75
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 98,
+				"h": 75
+			},
+			"sourceSize": {
+				"w": 98,
+				"h": 75
+			}
+		},
+		"ufoBlue.png": {
+			"frame": {
+				"x": 330,
+				"y": 1,
+				"w": 91,
+				"h": 91
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 91,
+				"h": 91
+			},
+			"sourceSize": {
+				"w": 91,
+				"h": 91
+			}
+		},
+		"ufoGreen.png": {
+			"frame": {
+				"x": 330,
+				"y": 94,
+				"w": 91,
+				"h": 91
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 91,
+				"h": 91
+			},
+			"sourceSize": {
+				"w": 91,
+				"h": 91
+			}
+		},
+		"ufoRed.png": {
+			"frame": {
+				"x": 329,
+				"y": 187,
+				"w": 91,
+				"h": 91
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 91,
+				"h": 91
+			},
+			"sourceSize": {
+				"w": 91,
+				"h": 91
+			}
+		},
+		"ufoYellow.png": {
+			"frame": {
+				"x": 301,
+				"y": 280,
+				"w": 91,
+				"h": 91
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 91,
+				"h": 91
+			},
+			"sourceSize": {
+				"w": 91,
+				"h": 91
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 422,
+			"h": 372
+		},
+		"scale": "1"
+	}
+}

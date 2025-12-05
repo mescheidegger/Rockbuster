@@ -1,0 +1,582 @@
+/* ========================= styles.css ========================= */
+/* Base page styling: center the canvas, dark space-y background. */
+:root { color-scheme: dark; }
+
+/* Fill viewport and prevent scrollbars (important on mobile). */
+html, body { height: 100%; margin: 0; overflow: hidden; }
+
+/* Use small viewport units to avoid iOS/Android URL bar jumpiness. */
+body {
+  /* Fallback first */
+  min-height: 100vh;
+
+  /* Prefer stabilized viewport height when supported */
+  min-height: 100svh;
+
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 800px at 50% 40%, #0b1220 0%, #05070e 60%, #03050a 100%);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #d9e2ff;
+
+  /* Prevent accidental text selection while swiping on mobile UIs */
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* Optional: reduce rubber-banding on iOS if you still see it */
+  overscroll-behavior: none;
+}
+
+/* Main game canvas.
+   NOTE: JS sets canvas.style.width/height responsively (letterboxed).
+   Do not set fixed CSS width/height here. */
+#game {
+  display: block;                 /* avoid inline baseline gaps */
+  border: 1px solid #1d2740;
+  background: transparent;
+
+  /* Crisp rendering preferences */
+  image-rendering: crisp-edges;   /* Chrome/Edge */
+  image-rendering: pixelated;     /* Firefox fallback */
+  box-sizing: border-box; /* include the 1px border in the width/height we set */
+
+  /* Disable browser gestures on the canvas (pinch/scroll/back-swipe) */
+  touch-action: none;
+}
+
+/* Debug console overlay (enabled via CONFIG.DEBUG.CONSOLE_OVERLAY) */
+.debug-console-overlay {
+  position: fixed;
+  left: 12px;
+  right: auto;
+  bottom: 12px;
+  width: min(520px, calc(100vw - 24px));
+  max-height: min(320px, 45vh);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(92, 174, 255, 0.28);
+  background: rgba(8, 12, 24, 0.86);
+  box-shadow: 0 24px 40px rgba(2, 6, 18, 0.55);
+  font: 12px/1.45 Menlo, Consolas, 'SFMono-Regular', ui-monospace, monospace;
+  color: #d9e2ff;
+  z-index: 120;
+  pointer-events: auto;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.debug-console-overlay__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.debug-console-overlay__title {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #91b4ff;
+}
+
+.debug-console-overlay__controls {
+  display: flex;
+  gap: 6px;
+}
+
+.debug-console-overlay__button {
+  padding: 4px 10px;
+  border: 1px solid rgba(130, 197, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(20, 32, 60, 0.8);
+  color: #d9e2ff;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 140ms ease, border-color 140ms ease;
+}
+
+.debug-console-overlay__button:hover,
+.debug-console-overlay__button:focus-visible {
+  background: rgba(44, 68, 110, 0.9);
+  border-color: rgba(152, 225, 255, 0.7);
+  outline: none;
+}
+
+.debug-console-overlay__messages {
+  flex: 1;
+  min-height: 120px;
+  max-height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.debug-console-overlay__entry {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: start;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(10, 18, 34, 0.55);
+}
+
+.debug-console-overlay__timestamp {
+  font-size: 11px;
+  color: #8aa7dd;
+}
+
+.debug-console-overlay__message {
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.debug-console-overlay__entry--info .debug-console-overlay__message,
+.debug-console-overlay__entry--debug .debug-console-overlay__message {
+  color: #a8caff;
+}
+
+.debug-console-overlay__entry--warn .debug-console-overlay__message {
+  color: #ffd07a;
+}
+
+.debug-console-overlay__entry--error .debug-console-overlay__message {
+  color: #ff9b9b;
+}
+
+.debug-console-overlay--collapsed {
+  max-height: none;
+}
+
+.debug-console-overlay--collapsed .debug-console-overlay__messages {
+  display: none;
+}
+
+.debug-console-overlay--collapsed .debug-console-overlay__button:first-child {
+  background: rgba(44, 68, 110, 0.9);
+}
+
+@media (max-width: 600px) {
+  .debug-console-overlay {
+    left: 8px;
+    bottom: 8px;
+    width: calc(100vw - 16px);
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .debug-console-overlay__messages {
+    min-height: 100px;
+  }
+}
+
+.hidden { display: none; }
+
+/* ======================================================================= */
+/*                              MENU OVERLAY                               */
+/* ======================================================================= */
+#menu-overlay,
+#gameover-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(4, 8, 20, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 30;
+  pointer-events: auto;
+  transition: opacity 160ms ease, visibility 160ms ease;
+}
+
+#menu-overlay.is-hidden,
+#gameover-overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#menu-overlay .menu-card,
+#gameover-overlay .menu-card {
+  width: min(520px, 90vw);
+  max-height: min(580px, 90vh);
+  overflow-y: auto;
+  background: rgba(9, 16, 32, 0.92);
+  border: 1px solid rgba(102, 227, 255, 0.24);
+  border-radius: 24px;
+  box-shadow: 0 32px 60px rgba(2, 6, 18, 0.7);
+  padding: 32px 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.menu-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.menu-title {
+  margin: 0;
+  font-size: clamp(28px, 5vw, 36px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu-subtitle {
+  margin: 0;
+  font-size: 16px;
+  color: #a9b5d9;
+}
+
+.menu-nav {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-nav-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(102, 227, 255, 0.35);
+  background: rgba(6, 12, 24, 0.75);
+  color: #d9e2ff;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+}
+
+.menu-nav-btn:hover,
+.menu-nav-btn:focus-visible {
+  background: rgba(24, 40, 72, 0.95);
+  border-color: rgba(142, 243, 255, 0.6);
+  outline: none;
+}
+
+.menu-nav-btn.is-active {
+  background: linear-gradient(135deg, rgba(102, 227, 255, 0.85), rgba(44, 158, 255, 0.85));
+  color: #041125;
+  border-color: rgba(142, 243, 255, 0.9);
+}
+
+.menu-section {
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.menu-section.is-active {
+  display: flex;
+}
+
+.menu-section h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.menu-lead {
+  margin: 0;
+  font-size: 16px;
+  color: #b9c3e6;
+}
+
+.menu-primary-btn {
+  align-self: center;
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: none;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background: linear-gradient(135deg, #66e3ff, #2c9eff);
+  color: #041125;
+  box-shadow: 0 14px 30px rgba(44, 158, 255, 0.35);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.menu-primary-btn:hover,
+.menu-primary-btn:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(44, 158, 255, 0.45);
+  outline: none;
+}
+
+.menu-primary-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 10px 24px rgba(44, 158, 255, 0.32);
+}
+
+.menu-footnote {
+  margin: 0;
+  font-size: 14px;
+  color: #8b97bc;
+  text-align: center;
+}
+
+.gameover-card {
+  align-items: center;
+  text-align: center;
+}
+
+.gameover-summary {
+  margin: 0;
+  font-size: 16px;
+  color: #b9c3e6;
+}
+
+.gameover-highlight {
+  margin: 0;
+  font-size: 18px;
+  color: #ffe08a;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gameover-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.gameover-actions .menu-primary-btn,
+.gameover-actions .menu-nav-btn {
+  width: 100%;
+}
+
+.menu-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+}
+
+.menu-controls h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #d9e2ff;
+}
+
+.menu-controls ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  font-size: 15px;
+  color: #b9c3e6;
+}
+
+.key {
+  display: inline-block;
+  min-width: 60px;
+  padding: 3px 10px;
+  margin-right: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(102, 227, 255, 0.4);
+  background: rgba(12, 20, 40, 0.9);
+  font-weight: 600;
+  color: #66e3ff;
+  text-align: center;
+}
+
+.powerup-legend {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.ufo-legend {
+  margin: 12px 0 16px;
+}
+
+.powerup-legend li,
+.ufo-legend {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(12, 20, 38, 0.85);
+  border: 1px solid rgba(102, 227, 255, 0.16);
+}
+
+.powerup-legend img,
+.ufo-legend img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px;
+  image-rendering: pixelated;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
+
+.powerup-legend h4,
+.ufo-legend h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.powerup-legend p,
+.ufo-legend p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #a9b5d9;
+}
+
+#menu-overlay a,
+#gameover-overlay a {
+  color: #66e3ff;
+  text-decoration: none;
+}
+
+#menu-overlay a:hover,
+#menu-overlay a:focus-visible,
+#gameover-overlay a:hover,
+#gameover-overlay a:focus-visible {
+  text-decoration: underline;
+  outline: none;
+}
+
+@media (max-width: 520px) {
+  #menu-overlay,
+  #gameover-overlay {
+    padding: 16px;
+  }
+
+  #menu-overlay .menu-card,
+  #gameover-overlay .menu-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+    gap: 20px;
+  }
+
+  .menu-nav {
+    gap: 10px;
+  }
+
+  .menu-nav-btn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
+/* ======================================================================= */
+/*                         MOBILE CONTROLS OVERLAY                          */
+/* Two controls appear ONLY on smaller screens:
+   - Bottom-left: virtual joystick (#stick with #stick-nub)
+   - Bottom-right: fire button (#fire-btn)
+   Elements stay in the DOM but are hidden on large screens.               */
+/* ======================================================================= */
+
+/* Overlay container sits above the canvas and spans the viewport. */
+#ui-controls {
+  position: fixed;
+  inset: 0;                 /* top/right/bottom/left: 0 */
+  pointer-events: none;     /* children will opt-in */
+  z-index: 10;              /* above the game canvas */
+
+  /* Respect iOS safe-area so buttons don’t sit under the home bar/notch */
+  padding-top: env(safe-area-inset-top, 0);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
+}
+
+/* Virtual joystick base (touchable) */
+#stick {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 2px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(2px);              /* nice-to-have; ignored if unsupported */
+  -webkit-backdrop-filter: blur(2px);
+  pointer-events: auto;                    /* enable input on this element */
+  touch-action: none;                      /* prevent browser panning/zooming */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Joystick movable nub; positioned relative to the base center.
+   JS will apply transform: translate(x, y) to move it around. */
+#stick-nub {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 64px;
+  margin-left: -32px; /* center horizontally */
+  margin-top: -32px;  /* center vertically */
+  border-radius: 50%;
+  background: rgba(102, 227, 255, 0.5);
+  border: 2px solid rgba(102, 227, 255, 0.85);
+  box-shadow: 0 2px 12px rgba(102,227,255,0.25);
+  transition: transform 60ms linear;       /* responsive but cheap */
+  will-change: transform;
+  pointer-events: none;                    /* base handles the pointer */
+}
+
+/* Fire button (touchable) */
+#fire-btn {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255,80,80,0.9), rgba(255,80,80,0.45));
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 2px 16px rgba(255,80,80,0.35);
+  pointer-events: auto;                    /* enable input */
+  touch-action: none;                      /* prevent browser gestures */
+  -webkit-tap-highlight-color: transparent;
+  color: transparent;                      /* purely visual; aria-label handles a11y */
+  outline: none;
+}
+
+/* Optional tactile feedback (visual) when pressed */
+#fire-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 10px rgba(255,80,80,0.25);
+}
+
+/* ========================= RESPONSIVE VISIBILITY ========================= */
+/* Hide controls on larger screens (desktop). Adjust breakpoint as needed. */
+@media (min-width: 1024px) {
+  #ui-controls { display: none; }
+}
+
+/* Slightly smaller controls on narrow phones */
+@media (max-width: 420px) {
+  #stick { width: 120px; height: 120px; }
+  #stick-nub { width: 56px; height: 56px; margin-left: -28px; margin-top: -28px; }
+  #fire-btn { width: 88px; height: 88px; }
+}
