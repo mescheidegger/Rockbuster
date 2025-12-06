@@ -1,94 +1,50 @@
 🎮 Rockbuster.io
+
 A Modern Asteroids-Style Shooter (HTML5 Canvas + Vite)
 
-👉 Play the game here: https://rockbuster.io
+👉 Play it here: https://rockbuster.io
 
-Rockbuster.io is a polished, fast arcade shooter built with vanilla JavaScript, HTML5 Canvas, and a lightweight custom engine.
-It’s designed as a clean, modern example of structuring a browser-based action game using ES modules, fixed-step updates, sprite atlases, and responsive high-DPI rendering.
+Rockbuster.io is a fast, responsive Asteroids-inspired shooter built with vanilla JavaScript and HTML5 Canvas. The project focuses on clean structure, fixed-step updates, simple physics, and a lightweight rendering pipeline using ES modules and atlas sprites.
 
 🚀 Features
 
-Smooth Asteroids-style controls (thrust, rotate, wrap-around)
-
-Multiple asteroid tiers with dynamic splitting
-
-UFO enemy with smart timing, AI, and precision shots
-
-Power-ups: Triple Shot, Shield, Speed, Extra Life
-
-Shield & weapon tier progression
-
-True fixed-step physics (120 FPS simulation)
-
-Pixel-sharp rendering with device-pixel-ratio awareness
-
-Touch controls (virtual joystick + fire button)
-
-Local high-score storage
-
-Project built & served with Vite
+1. Smooth Asteroids-style movement (thrust, rotation, wrap-around)
+2. Multiple asteroid tiers that split dynamically
+3. A UFO enemy with timed spawns and simple AI
+4. Power-ups: Triple Shot, Shield, Speed Boost, Extra Life
+5. Shield and weapon leveling tied into gameplay flow
+6. Fixed-step physics running at 120 FPS
+7. High-DPI aware rendering for crisp visuals
+8. Mobile-friendly virtual joystick + fire button
+9. Local high-score saving
+10. Built and served using Vite
 
 🗂️ Tech Overview
 
-Rockbuster uses a compact but well-structured engine:
+The game runs on a small set of focused modules:
 
-Game.js — main loop, state machine, physics tick, collision flow
-
-Renderer.js — world rendering + atlas sprite drawing
-
-HudRenderer.js / HUD.js — score, wave, lives, mute UI
-
-Collision.js — fast circle-based collision helpers
-
-Physics.js — integration + toroidal world wrapping
-
-Spawner.js — wave progression + power-up drops
-
-VirtualControls.js — mobile joystick + fire button
-
-AtlasCache.js — TexturePacker atlas loader
-
-All sprites are standard PNG atlases with JSON metadata.
+1. Game.js - main loop, state machine, physics ticking, collision routing
+2. Renderer.js - world rendering and atlas sprite handling
+3. HudRenderer.js / HUD.js - score, waves, lives, mute UI
+4. Collision.js - optimized circle-based collision helpers
+5. Physics.js - movement integration + toroidal space wrapping
+6. Spawner.js - wave logic and power-up drops
+7. VirtualControls.js - mobile input (joystick + fire button)
+8. AtlasCache.js - loader for TexturePacker sprite atlases
+9. Sprites and metadata are standard PNG + JSON atlases.
 
 📦 Running the Game (Vite)
-Install dependencies
-npm install
 
-Start dev server
-npm run dev
-
-
-Vite serves index.html from the project root.
-
-Build for production
-npm run build
-
-
-Output is written to dist/ (ideal for DigitalOcean, Netlify, Vercel, etc.).
+1. npm install
+2. npm run dev
 
 🕹️ Controls
+
 Keyboard
-
-Arrow Keys — rotate & thrust
-
-Space / J — fire
-
-Enter — start / restart
+1. Arrow Keys - rotate & thrust
+2. Space / J - fire
+3. Enter - start or restart
 
 Touch
-
-Left joystick — movement + thrust
-
-Right button — fire
-
-📁 Project Structure (Condensed)
-src/
-  core/             ← Game engine
-  systems/          ← Rendering, collision, physics, atlases
-  entities/         ← Ship, Asteroids, Bullets, UFO
-  ui/               ← Menus, overlays, virtual controls
-  audio/            ← Audio manager + unlock flow
-assets/
-public/
-index.html
-vite.config.js
+1. Left joystick - movement + thrust
+2. Right button - fire
