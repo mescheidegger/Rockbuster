@@ -6,6 +6,12 @@ import { GameOverOverlay } from './ui/GameOverOverlay.js';
 import { DebugConsoleOverlay } from './ui/DebugConsoleOverlay.js';
 import { AtlasCache } from './systems/AtlasCache.js';
 
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
+
 const ATLAS_BASE_PATHS = [
   './assets/sprites/shipsandufos',
   './assets/sprites/Damage/damage',

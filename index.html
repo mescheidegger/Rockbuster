@@ -1,14 +1,3 @@
-<!--
-Rockbuster.io Starter
-Stack: HTML5 Canvas 2D + Vanilla JS ES Modules (+ optional Howler.js)
-Deployable as static site (Netlify/Vercel/GitHub Pages)
-
-This HTML now includes a MOBILE CONTROLS OVERLAY:
-  - Bottom-left virtual joystick (base + nub)
-  - Bottom-right fire button
-They are always present in the DOM and will be hidden on larger screens via CSS.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,19 +9,16 @@ They are always present in the DOM and will be hidden on larger screens via CSS.
        - user-scalable=no prevents pinch-zoom while playing (optional; improves UX).
   -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
 
   <title>Rockbuster.io</title>
-
-  <!-- Global styles.
-       We'll add CSS rules here (in styles.css) to:
-         • Position the joystick + fire button on small screens
-         • Hide them on larger screens (e.g., min-width: 1024px)
-         • Disable browser gestures over the controls (touch-action: none)
-  -->
   <link rel="stylesheet" href="./styles.css" />
-
-  <!-- Optional: Howler.js for audio (uncomment to enable) -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/howler@2/dist/howler.core.min.js"></script> -->
 </head>
 <body>
   <!-- Main game canvas (logical size 960x540; CSS size can differ) -->
